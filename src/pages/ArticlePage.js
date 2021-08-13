@@ -19,7 +19,8 @@ const ArticlePage = ({ match }) => {
 
   return (
     <>
-      <h1>This is the {article.title} article</h1>
+      <h1>{article.title}</h1>
+      <p>{article.body}</p>
     </>
   )
 }
