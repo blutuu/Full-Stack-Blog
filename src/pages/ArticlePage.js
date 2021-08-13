@@ -1,15 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ArticlePage = ({ match }) => {
-  const id = match.params.id;
-  const [article, setArticle] = useState([]);
+  const articleId = parseInt(match.params.id);
+  const [article, setArticle] = useState('');
 
-  fetch('https://jsonplaceholder.typicode.com/posts')
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(data => {
-      setArticle(data.filter(item => item.id === id));
-    });
+      const filteredData = data.find(item => item.id === articleId);
+      setArticle(filteredData);
+      console.log(article);
+    })
+    .catch(error => console.log(error));
+  }, [article.id]);
 
 
   return (
