@@ -20,7 +20,7 @@ const ArticlesList = () => {
       <h1>Articles</h1>
       {
         articleList.map((article, key) => (
-          <h3>{article.title}</h3>
+          <h3 key={key}>{article.title}</h3>
         ))
       }
     </>
