@@ -1,30 +1,28 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; 
+import ArticlesList from '../Components/ArticlesList';
 
-const ArticlesList = () => {
-  const [articleList, setArticleList] = useState([]);
+const ArticlesListPage = () => {
+  const [articleList, setArticleList] = useState([{id: 0}]);
+  const staticArticleId = articleList[0].id;
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(data => {
       setArticleList(data);
-      console.log(articleList);
+      console.log(staticArticleId);
     })
     .catch(error => console.log(error));
-  }, [articleList[0].id]);
+  }, [staticArticleId]);
+
 
   return (
     <>
       <h1>Articles</h1>
-      {
-        articleList.map((article, key) => (
-          <h3 key={key}>{article.title}</h3>
-        ))
-      }
+      <ArticlesList articles={articleList} />
     </>
   )
 }
 
-export default ArticlesList
+export default ArticlesListPage;
