@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ArticlesList from '../Components/ArticlesList';
+import NotFoundPage from './NotFoundPage';
 
 const ArticlePage = ({ match }) => {
   const articleId = parseInt(match.params.id);
@@ -19,13 +20,13 @@ const ArticlePage = ({ match }) => {
     .catch(error => console.log(error));
   }, [staticArticleId, articleList[0].id]);
 
-  const otherArticles = articleList.filter(item => item.title !== article.title);
+  const otherArticles = article ? articleList.filter(item => item.title !== article.title) : null;
 
   return (
     <>
       {
         !article
-        ? <h1>Article does not exist!</h1>
+        ? <NotFoundPage />
         : <>
             <h1 className="mt5">{article.title}</h1>
             <p className="mb5">{article.body}</p>

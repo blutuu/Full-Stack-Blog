@@ -22,6 +22,7 @@ function App() {
           <Switch>
             <Route path="/" component={HomePage} exact/>
             <Route path="/about" component={AboutPage} />
+            <Route path="/about" component={AboutPage} />
             <Route path="/articles-list" component={ArticlesListPage} />
             <Route path="/article/:id" component={ArticlePage} />
             <Route component={NotFoundPage} />
