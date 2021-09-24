@@ -44,6 +44,3 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
 });
 
 app.listen(port, () => console.log('Listening on port 8000')); 
- 
-// process.on('SIGINT', () => { console.log("exiting…"); process.exit(); });
-// process.on('exit', () => { console.log("exiting…"); process.exit(); });
