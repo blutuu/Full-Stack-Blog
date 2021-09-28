@@ -37,6 +37,7 @@ app.get('/api/articles/:name', async (req, res) => {
   }, res);
 });
 
+
 // Upvote selected article
 app.post('/api/articles/:name/upvote', async (req, res) => {
   withDB(async (db) => {
@@ -52,12 +53,14 @@ app.post('/api/articles/:name/upvote', async (req, res) => {
   }, res);
 });
 
+
 // View upvotes of selected article
 app.post('/api/articles/:name/view-upvotes', (req, res) => {
   const articleName = req.params.name;
 
   
 });
+
 
 // Add Comment to selected article
 app.post('/api/articles/:name/add-comment', (req, res) => {
@@ -80,6 +83,7 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
   }, res);
 });
 
+
 // Mongo: View info from all articles
 app.get('/api/articles/view-all', async (req, res) => {
   try {
@@ -96,5 +100,8 @@ app.get('/api/articles/view-all', async (req, res) => {
     res.status(500).json({ message: 'Error connecting to db', error });
   }
 });
+
+
+
 
 app.listen(port, () => console.log('Listening on port 8000')); 
