@@ -22,6 +22,11 @@ const withDB = async (operations, res) => {
   }
 }
 
+
+//////////////////////////////
+//  * Database Endpoints    //
+//////////////////////////////
+
 // Get selected article
 app.get('/api/articles/:name', async (req, res) => {
   withDB(async (db) => {
