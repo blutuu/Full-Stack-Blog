@@ -7,6 +7,7 @@ const port = process.env.PORT || 8000;
 // Initialize server
 app.use(express.json());
 
+
 // DB action
 const withDB = async (operations, res) => {
   try {
@@ -85,20 +86,12 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
 
 
 // Mongo: View info from all articles
-app.get('/api/articles/view-all', async (req, res) => {
-  try {
-    const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true });
-    const db = client.db('my-blog');
-
-    const articles = await db.collection('articles').find({});
+app.get('/api/articles', async (req, res) => {
+  withDB(async (db) => {
+    const articles = await db.collection('articles').find({}).toArray();
 
     res.status(200).json(articles);
-
-    client.close();
-
-  } catch (error) {
-    res.status(500).json({ message: 'Error connecting to db', error });
-  }
+  });
 });
 
 

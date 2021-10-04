@@ -7,11 +7,11 @@ const ArticlesListPage = () => {
   const staticArticleId = articleList[0].id;
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('/api/articles')
     .then(response => response.json())
     .then(data => {
       setArticleList(data);
-      console.log(staticArticleId);
+      console.log(articleList);
     })
     .catch(error => console.log(error));
   }, [staticArticleId]);

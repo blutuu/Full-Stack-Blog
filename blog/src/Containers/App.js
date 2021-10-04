@@ -24,7 +24,7 @@ function App() {
             <Route path="/about" component={AboutPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/articles-list" component={ArticlesListPage} />
-            <Route path="/article/:id" component={ArticlePage} />
+            <Route path="/article/:name" component={ArticlePage} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
