@@ -8,13 +8,13 @@ const ArticlePage = ({ match }) => {
   const name = match.params.name;
   const [article, setArticle] = useState({ upvotes: 0, comments: [] });
   const [articleList, setArticleList] = useState([{id: 0}]);
-  // const staticArticleId = articleId;
 
   useEffect(() => {
     fetch(`/api/articles/`)
     .then(response => response.json())
     .then(data => {
       const filteredData = data.find(item => item.name === name);
+      console.log(filteredData)
       
       setArticle(filteredData);
       setArticleList(data);
@@ -30,12 +30,18 @@ const ArticlePage = ({ match }) => {
         !article
         ? <NotFoundPage />
         : <>
-            <h1 className="mt5">{article.name}</h1>
-            <p>This post has been upvoted {article.upvotes} times</p>
-            <p className="mb5">{article.body}</p>
-            <CommentSection name={name} />
-            <h2>Other Articles</h2>
-            <ArticlesList articles={otherArticles} />
+            <section>
+              <h1 className="mt5">{ article.name }</h1>
+              <p className="tl">This post has been upvoted { article.upvotes } times</p>
+              <p className="mb5">{ article.body }</p>
+              <CommentSection comments={ article.comments } />
+            </section>
+
+            <section className="mt5 pt3">
+              <hr className="hr-text" data-content="Other Articles"/>
+              <ArticlesList articles={ otherArticles } />
+            </section>
+            
           </>
       }
     </>

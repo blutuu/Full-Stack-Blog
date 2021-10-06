@@ -1,40 +1,31 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
-const CommentSection = ({ name }) => {
-  const [commentsList, setCommentsList] = useState([{"username": "", "text": ""}]);
-
-
-  useEffect(() => {
-    fetch(`/api/articles/${name}`)
-    .then(response => response.json())
-    .then(data => {
-      setCommentsList(data.comments);
-    })
-    .catch(error => console.log(error));
-  }, [name]);
-
+const CommentSection = ({ comments }) => {
 
   return (
     <section>
+      <h3>Comments</h3>
+      <div className="comment-box ml3 ">
+        <form action="">
+          <textarea name="comments" 
+            className="br2 b--gray"
+            id="comment-textarea" 
+            cols="60" rows="4" 
+            placeholder="Leave a comment here..."></textarea>
+        </form>
+      </div>
+      
+      <div className="comments mv4 tl ml3">
 
-      <div className="comments mb4 ">
-
-        { commentsList.map((comment, key) => (
-          <div key={key}>
-            <h4>{ comment.username }</h4>
-            <span>{ comment.text }</span>
+        { comments.map((comment, key) => (
+          <div className="mv3 flex items-start" key={key}>
+            <h4 className="pr2 ma0">{ comment.username }:</h4>
+            <p className="pa0 ma0 ">{ comment.text }</p>
           </div>
         ))}
 
       </div>
 
-      <div className="comment-box">
-        <form action="">
-          <textarea name="comments" id="comment-textarea" cols="30" rows="10" placeholder="Enter comment here..."></textarea>
-        </form>
-      </div>
-      
     </section>
   )
 }
