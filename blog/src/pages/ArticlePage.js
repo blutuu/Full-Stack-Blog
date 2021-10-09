@@ -2,12 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import ArticlesList from '../Components/ArticlesList';
 import CommentSection from '../Components/CommentSection';
+import UpvoteSection from '../Components/UpvoteSection';
 import NotFoundPage from './NotFoundPage';
 
 const ArticlePage = ({ match }) => {
   const name = match.params.name;
   const [article, setArticle] = useState({ upvotes: 0, comments: [] });
-  const [articleList, setArticleList] = useState([{id: 0}]);
+  const [articleList, setArticleList] = useState([]);
 
   useEffect(() => {
     fetch(`/api/articles/`)
@@ -32,7 +33,7 @@ const ArticlePage = ({ match }) => {
         : <>
             <section>
               <h1 className="mt5">{ article.name }</h1>
-              <p className="tl">This post has been upvoted { article.upvotes } times</p>
+              <UpvoteSection articleName={ article.name } upvotes={ article.upvotes } setArticle={ setArticle }/>
               <p className="mb5">{ article.body }</p>
               <CommentSection comments={ article.comments } />
             </section>

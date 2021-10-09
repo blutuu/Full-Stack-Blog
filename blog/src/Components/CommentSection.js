@@ -1,17 +1,28 @@
 import React from 'react';
 
 const CommentSection = ({ comments }) => {
+  const submitComment = () => {
+    
+  };
 
   return (
     <section>
       <h3>Comments</h3>
-      <div className="comment-box ml3 ">
-        <form action="">
-          <textarea name="comments" 
-            className="br2 b--gray"
-            id="comment-textarea" 
-            cols="60" rows="4" 
-            placeholder="Leave a comment here..."></textarea>
+      <div className="comment-form ml3 ">
+        <form onSubmit={ submitComment }>
+          <label>
+            Name:
+            <input type="text" className="db" />
+          </label>
+          <label>
+            Comment:
+            <textarea name="comments" 
+              className="br2 b--gray db"
+              id="comment-textarea" 
+              cols="60" rows="4" 
+              placeholder="Leave a comment here..."></textarea>
+          </label>
+          <input type="submit" value="Submit" />
         </form>
       </div>
       
