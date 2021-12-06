@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "blog",
+			"dependsOn": [
+				"start blog",
+				"start blog server",
+				"start mongo"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "start blog",
+			"type": "npm",
+			"script": "start",
+			"path": "blog/",
+			"problemMatcher": [],
+			"detail": "react-scripts start",
+			"group": "build"
+		},
+		{
+			"label": "start blog server",
+			"type": "npm",
+			"script": "start",
+			"path": "blog-backend/",
+			"problemMatcher": [],
+			"detail": "npx nodemon --exec babel-node src/server.js",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "start mongo",
+			"type": "shell",
+			"command": "mongod --dbpath ~/data/db",
+			"problemMatcher": []
+		}
+	]
+}
