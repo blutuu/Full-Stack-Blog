@@ -1,0 +1,14 @@
+ #intro {
+  background: rgb(59,142,255);
+  background: linear-gradient(212deg, rgba(59,142,255,1) 0%, rgba(30,91,177,1) 100%);
+  padding: 2rem 11.851851%;
+  color: white;
+  overflow: hidden;
+
+  #greeting {
+    min-width: 70%;
+    @include breakpoint(small) {
+      width: 48.148148%;
+    }
+  }
+ }

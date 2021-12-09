@@ -1,19 +1,18 @@
 .navbar {  
-  border-bottom: solid 5px;
+  background-color: white;
+  border-bottom: solid 1px #a9a9a9;
 
   ul {
     display: flex;
-    justify-content: center;
-    width: 35%;
     margin: 0px auto;
+    padding-left: 3.88889%;
     list-style-type: none;
 
     li {
-      font-weight: bold;
 
       a {
         display: block;
-        padding: 0.67rem 1rem; 
+        padding: 1.5rem 1.5rem; 
         text-decoration: none;
         color: black;
       }

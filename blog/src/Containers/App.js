@@ -17,8 +17,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
-        <div id="page-body">
+        <div id="page_body">
+          <NavBar />
           <Switch>
             <Route path="/" component={HomePage} exact/>
             <Route path="/about" component={AboutPage} />

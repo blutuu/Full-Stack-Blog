@@ -1,3 +1,27 @@
+body {
+  background-image: url("../Images/bermuda-triangle.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.App {
+  min-width: 320px;
+  max-width: 1200px;
+
+  @include breakpoint(tablet) {
+    min-width: 768px;
+  }
+  @include breakpoint(small) {
+    width: 70%; 
+    min-width: 1024px;
+  }
+  @include breakpoint(large) {
+  }
+
+  margin: 0 auto;
+  background-color: white;
+}
+
 // Styled HR
 .hr-text {
   line-height: 1em;
