@@ -33,9 +33,15 @@ const ArticlePage = ({ match }) => {
         : <>
             <section>
               <h1 className="mt5">{ article.name }</h1>
-              <UpvoteSection articleName={ article.name } upvotes={ article.upvotes } setArticle={ setArticle }/>
+              <UpvoteSection 
+                articleName={ article.name } 
+                upvotes={ article.upvotes } 
+                setArticle={ setArticle }/>
               <p className="mb5">{ article.content }</p>
-              <CommentSection articleName={ article.name } comments={ article.comments } setArticle={ setArticle }/>
+              <CommentSection 
+                articleName={ article.name } 
+                comments={ article.comments } 
+                setArticle={ setArticle }/>
             </section>
 
             <section className="mt5 pt3">

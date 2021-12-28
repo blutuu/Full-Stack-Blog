@@ -1,4 +1,8 @@
 import React from 'react';
+import { IconContext } from 'react-icons/lib';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import ArticlesList from '../Components/ArticlesList';
+import ContactForm from '../Components/ContactForm';
 
 const HomePage = () => {
   return (
@@ -6,11 +10,73 @@ const HomePage = () => {
       <section className="pv4" id="intro">
         <div id="greeting">
           <h1>Hello, welcome to my blog!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sit amet lectus quis ultricies. Nam et nisl eget lorem vehicula sagittis eu sit amet enim. Integer a augue lobortis, tincidunt urna eu, interdum magna. Suspendisse non nisi eget nibh aliquet vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sagittis bibendum congue. Donec vel rhoncus est, vitae fermentum felis. Sed est tortor, imperdiet at nulla nec, dapibus fermentum arcu. Vivamus luctus a elit non varius. Donec pretium neque nisl, at tempus erat sagittis viverra. Praesent rutrum gravida est, sed faucibus arcu tincidunt vel. Donec rhoncus tortor sed iaculis tincidunt. Vivamus posuere eget tortor eu sodales. Suspendisse sit amet orci sem. Suspendisse a velit vitae risus hendrerit rutrum. Donec eu accumsan metus, in consequat dolor.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sit amet lectus quis ultricies. Nam et nisl eget lorem vehicula sagittis eu sit amet enim. Integer a augue lobortis, tincidunt urna eu, interdum magna. Suspendisse non nisi eget nibh aliquet vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         </div>
       </section>
 
-      <section className="ba vh-25 "></section>
+      <section className="pv5" id="recent-posts">
+        <h3 className="fw4">Recent Posts</h3>
+        <div id="articles-container">
+          <div className="article-square ph3  ">
+            <span className="b ma0 mb3">Why I Code</span>
+            <small className="f7" >2 hours ago</small>
+            <p className="f7 mt2 ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
+            </p>
+          </div>
+          <div className="article-square ph3  ">
+            <span className="b ma0 mb3">Why I Code</span>
+            <small className="f7" >2 hours ago</small>
+            <p className="f7 mt2 ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
+            </p>
+          </div>
+          <div className="article-square ph3  ">
+            <span className="b ma0 mb3">Why I Code</span>
+            <small className="f7" >2 hours ago</small>
+            <p className="f7 mt2 ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
+            </p>
+          </div>
+
+          <IconContext.Provider value={{
+            className: "slide-arrow", 
+            size: "2rem",
+            color: "#0099ff",
+            style: {
+              position: "absolute",
+              top: "50%", 
+              right: "100%"
+            }}}>
+            <FaChevronLeft />
+          </IconContext.Provider>
+
+          <div className="article-square ph3 large-article-square">
+            <span className="b ma0 mb3">Why I Code</span>
+            <small className="f7" >2 hours ago</small>
+            <p className="f7 mt2 ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
+            </p>
+          </div>
+          <IconContext.Provider value={{
+            className: "slide-arrow", 
+            size: "2rem",
+            color: "#0099ff",
+            style: {
+              position: "absolute",
+              top: "50%",
+              left: "100%"
+            }}}>
+            <FaChevronRight />
+          </IconContext.Provider>
+        </div>
+
+        {ArticlesList}
+      </section>
+
+      <section className="bg-black-80 vh-50 " id="footer">
+        <ContactForm />
+      </section>
     </div>
   )
 }
