@@ -28,6 +28,7 @@ const ArticlePage = () => {
 
   return (
     <>
+      <div className="banner"></div>
       {
         !article
         ? <NotFoundPage />

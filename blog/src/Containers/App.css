@@ -24,9 +24,8 @@
   color: #61dafb;
 }
 
-#page-body {
-  width: 500px;
-  margin: 0 auto;
+#body-content {
+  padding: 0 4rem 50vh;
 }
 
 @keyframes App-logo-spin {

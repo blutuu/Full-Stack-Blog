@@ -18,10 +18,13 @@ const ArticlesListPage = () => {
 
 
   return (
-    <>
-      <h1>Articles</h1>
-      <ArticlesList articles={articleList} />
-    </>
+    <div id="articles-list-page">
+      <div className="banner"></div>
+      <div id="page-content">
+        <h1>Articles</h1>
+        <ArticlesList articles={articleList} />
+      </div>
+    </div>
   )
 }
 

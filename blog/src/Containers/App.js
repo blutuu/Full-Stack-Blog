@@ -33,7 +33,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <section id="page_body">
+        <section id="page-body">
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage/>} exact/>
