@@ -1,12 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ArticlesList from '../Components/ArticlesList';
 import CommentSection from '../Components/CommentSection';
 import UpvoteSection from '../Components/UpvoteSection';
 import NotFoundPage from './NotFoundPage';
 
-const ArticlePage = ({ match }) => {
-  const name = match.params.name;
+const ArticlePage = () => {
+  const { name } = useParams();
   const [article, setArticle] = useState({ upvotes: 0, comments: [] });
   const [articleList, setArticleList] = useState([]);
 
@@ -35,7 +36,7 @@ const ArticlePage = ({ match }) => {
               <h1 className="mt5">{ article.name }</h1>
               <UpvoteSection 
                 articleName={ article.name } 
-                upvotes={ article.upvotes } 
+                upvotes={ article.upvotes }
                 setArticle={ setArticle }/>
               <p className="mb5">{ article.content }</p>
               <CommentSection 

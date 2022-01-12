@@ -1,0 +1,143 @@
+#footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 7% 2rem;
+  color: white;
+
+  @include breakpoint(mobile) {
+    padding: 4rem 11.851851% 2rem;
+  }
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+  }
+
+  @include breakpoint(tablet2) {
+    justify-content: space-between;
+  }
+
+  > div {
+    flex-grow: 1;
+    margin: 0 1rem;
+
+    @include breakpoint(tablet2) {
+      flex-grow: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  hr {
+    display: none;
+
+    @include breakpoint(tablet2) {
+      display: block;
+      align-self: center;
+      height: 130px;
+      border-width: 0;
+      border-left-width: 1px;
+      margin: 0;
+    }
+  }
+
+  .contact-form {
+    h3 {
+      @include breakpoint(tablet) {
+        margin-bottom: 2rem;
+      }
+    }
+    
+    form {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+
+      textarea {
+        @include breakpoint(tablet2) {
+          width: 266px;
+        }
+      }
+    }
+  }
+
+  #recent-articles-list {
+    h3 {
+      @include breakpoint(tablet) {
+        margin-bottom: 3.25rem;
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        color: #edededa1;
+        padding-bottom: 1rem;
+
+        a {
+          text-decoration: underline;
+          color: inherit;
+
+          &:visited {
+            color: inherit;
+          }
+
+          &:hover {
+            color: #EDEDED;
+          }
+        }
+
+      }
+    }
+  }
+
+  #mern-stack {
+    align-self: center;
+    margin-top: 4rem;
+    
+    @include breakpoint(tablet2) {
+      width: 140px;
+      margin-top: 0;
+    }
+
+    #icon-container {
+      margin: 0 auto;
+      color: #EDEDED7D;
+
+      @include breakpoint(tablet) {
+        width: 278px;
+      }
+
+      @include breakpoint(tablet2) {
+        width: 100%;
+        transform: rotate(45deg);
+
+        > svg {
+          width: 2.5rem;
+          height: 2.5rem;
+          transform: rotate(-45deg);
+        }
+      }
+
+      > svg {
+        transition: 0.3s;
+        
+        &:hover {
+          color: #EDEDED;
+        }
+      }
+    }
+  }
+  
+}

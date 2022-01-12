@@ -5,6 +5,9 @@
   @else if $point == tablet {
     @media (min-width: 768px) { @content }
   }
+  @else if $point == tablet2 {
+    @media (min-width: 1000px) { @content }
+  }
   @else if $point == small {
     @media (min-width: 1024px) { @content }
   }

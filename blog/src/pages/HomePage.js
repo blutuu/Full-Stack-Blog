@@ -1,11 +1,10 @@
 import React from 'react';
 import { IconContext } from 'react-icons/lib';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
-import ArticlesList from '../Components/ArticlesList';
-import ContactForm from '../Components/ContactForm';
 
 const HomePage = () => {
-  return (
+
+  return ( 
     <div>
       <section className="pv4" id="intro">
         <div id="greeting">
@@ -14,7 +13,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="pv5" id="recent-posts">
+      <section className="pv5" id="recent-articles-blocks">
         <h3 className="fw4">Recent Posts</h3>
         <div id="articles-container">
           <div className="article-square ph3  ">
@@ -71,12 +70,8 @@ const HomePage = () => {
           </IconContext.Provider>
         </div>
 
-        {ArticlesList}
       </section>
-
-      <section className="bg-black-80 vh-50 " id="footer">
-        <ContactForm />
-      </section>
+      
     </div>
   )
 }
