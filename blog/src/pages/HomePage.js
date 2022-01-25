@@ -1,8 +1,9 @@
 import React from 'react';
+import ArticlesList from '../Components/ArticlesList';
 import { IconContext } from 'react-icons/lib';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
-const HomePage = () => {
+const HomePage = ({ articles }) => {
 
   return ( 
     <div>
@@ -16,27 +17,7 @@ const HomePage = () => {
       <section className="pv5" id="recent-articles-blocks">
         <h3 className="fw4">Recent Posts</h3>
         <div id="articles-container">
-          <div className="article-square ph3  ">
-            <span className="b ma0 mb3">Why I Code</span>
-            <small className="f7" >2 hours ago</small>
-            <p className="f7 mt2 ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
-            </p>
-          </div>
-          <div className="article-square ph3  ">
-            <span className="b ma0 mb3">Why I Code</span>
-            <small className="f7" >2 hours ago</small>
-            <p className="f7 mt2 ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
-            </p>
-          </div>
-          <div className="article-square ph3  ">
-            <span className="b ma0 mb3">Why I Code</span>
-            <small className="f7" >2 hours ago</small>
-            <p className="f7 mt2 ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Proin sit quis ultricies.
-            </p>
-          </div>
+          <ArticlesList articles={articles} listType={'card'}/>
 
           <IconContext.Provider value={{
             className: "slide-arrow", 

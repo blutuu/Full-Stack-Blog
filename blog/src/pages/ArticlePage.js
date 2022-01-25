@@ -26,35 +26,39 @@ const ArticlePage = () => {
 
   const otherArticles = article ? articleList.filter(item => item.name !== article.name) : null;
 
-  return (
-    <>
-      <div className="banner"></div>
-      {
-        !article
-        ? <NotFoundPage />
-        : <>
-            <section>
+  return !article
+    ? <NotFoundPage />
+    : (<div id='article-page'>
+        <div className="banner"></div>
+        <section>
+          <div id="page-content">
+            <section id='content-section'>
+              
               <h1 className="mt5">{ article.name }</h1>
+  
               <UpvoteSection 
                 articleName={ article.name } 
                 upvotes={ article.upvotes }
                 setArticle={ setArticle }/>
+  
               <p className="mb5">{ article.content }</p>
-              <CommentSection 
-                articleName={ article.name } 
-                comments={ article.comments } 
-                setArticle={ setArticle }/>
-            </section>
-
-            <section className="mt5 pt3">
-              <hr className="hr-text" data-content="Other Articles"/>
-              <ArticlesList articles={ otherArticles } />
+              
             </section>
             
-          </>
-      }
-    </>
-  )
+            <CommentSection 
+              articleName={ article.name } 
+              comments={ article.comments } 
+              setArticle={ setArticle }/>
+
+            <div className="mt5 pt3" id='recent-articles-blocks'>
+              <hr className="hr-text" data-content="Other Articles"/>
+              <div id='articles-container'><ArticlesList articles={ otherArticles } listType={'card'}/></div>
+            </div>
+
+          </div>
+        </section>
+      </div>)
+  
 }
 
 export default ArticlePage;

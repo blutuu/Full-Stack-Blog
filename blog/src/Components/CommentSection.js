@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Anime from 'react-anime';
 
 const CommentSection = ({ articleName, comments, setArticle }) => {
   const [ username, setUsername ] = useState('');
@@ -24,9 +25,9 @@ const CommentSection = ({ articleName, comments, setArticle }) => {
 
 
   return (
-    <section>
+    <section id='comment-section'>
       <h3>Comments</h3>
-      <div className="comment-form ml3 ">
+      <div id="comment-form">
 
           <label>
             Name:
@@ -51,15 +52,16 @@ const CommentSection = ({ articleName, comments, setArticle }) => {
       
       <div className="comments mv4 tl ml3">
 
-        { comments.map((comment, key) => (
-          <div className="mv3 flex items-start" key={key}>
-            <h4 className="pr2 ma0">{ comment.username }:</h4>
-            <p className="pa0 ma0 ">{ comment.text }</p>
-          </div>
-        ))}
+        <Anime >
+          { comments.map((comment, key) => (
+            <div className="mv3 flex items-start" key={key}>
+              <h4 className="pr2 ma0">{ comment.username }:</h4>
+              <p className="pa0 ma0 ">{ comment.text }</p>
+            </div>
+          ))}
+        </Anime>
 
       </div>
-
     </section>
   )
 }

@@ -1,9 +1,10 @@
  #intro {
   background: rgb(0,238,255);
   background: linear-gradient(212deg, rgba(0,238,255,1) 0%, rgba(0,153,255,1) 34%, rgba(0,68,204,1) 100%);
-  padding: 2rem 11.851851%;
+  padding: 6rem 11.851851%;
   color: white;
   overflow: hidden;
+  clip-path: polygon(100% 0, 100% 89%, 45% 100%, 0 91%, 0 0);
   
   #greeting {
     min-width: 70%;
@@ -31,11 +32,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     max-width: 724px;
     margin: 2rem 0;
 
     @include breakpoint(tablet) {
-      justify-content: space-between;
+      
     }
     
     .article-square {
@@ -43,7 +45,6 @@
       height: 150px;
       border: solid 1px lighten($color: #000000, $amount: 85);
       border-radius: 0.75rem;
-      margin:0 0.5rem;
       padding: 1.5rem 1.5rem;
       display: none;
 
@@ -51,12 +52,15 @@
         display: block;
       }
 
-      & > span {
+      & span {
         display: block;
         margin-bottom: .5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
-      & > small {
+      & small {
         position: relative;
         margin-left: 0.95rem;
         color: lighten($color: #000000, $amount: 65);

@@ -1,0 +1,15 @@
+#comment-form {
+  textarea,
+  input[type="text"] {
+    min-width: 250px;
+    width: 100%;
+    max-width: 435px;
+  }
+}
+
+#demo-svg {
+  path {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 0;
+  }
+}

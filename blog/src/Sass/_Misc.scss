@@ -1,3 +1,8 @@
+* a {
+  &:visited {
+    color: inherit;
+  }
+}
 body {
   background-image: url("../Images/bermuda-triangle.png");
   background-color: #0099ff;
@@ -50,7 +55,8 @@ body {
       margin-top: 0;
     }
 
-    p {
+    & > p,
+    & > section p {
       min-width: 70%;
 
       @include breakpoint(small) {

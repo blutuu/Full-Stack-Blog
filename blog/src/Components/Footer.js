@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
 import styled from 'styled-components';
+import ArticlesList from './ArticlesList';
 import ContactForm from './ContactForm';
 import MernIcons from './MernIcons';
 
@@ -18,19 +18,7 @@ const Footer = ({ articles }) => {
       <hr />
       <div id="recent-articles-list">
         <MidHeader>Recent Articles</MidHeader>
-        <ul>
-          {
-            !articles 
-            ? <h1>Loading...</h1>
-            : articles.map((article, key) => (
-                <li className="" key={key}>
-                  <Link to={`/article/${article.name}`}>
-                    <span>{article.name}</span>
-                  </Link>
-                </li>
-            ))
-          }
-        </ul>
+        <ArticlesList articles={articles} listType={'small'}/>
       </div>
       <hr />
       <MernIcons />

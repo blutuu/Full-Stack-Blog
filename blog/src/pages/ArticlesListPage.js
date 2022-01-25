@@ -22,7 +22,8 @@ const ArticlesListPage = () => {
       <div className="banner"></div>
       <div id="page-content">
         <h1>Articles</h1>
-        <ArticlesList articles={articleList} />
+        <ArticlesList articles={articleList} listType={'large'}/>
+        <div className="vh-25 "></div>
       </div>
     </div>
   )

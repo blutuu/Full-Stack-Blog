@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import '../Sass/Styles.scss';
 import 'tachyons';
+import ScrollToTop from '../Components/ScrollToTop';
 import NavBar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import HomePage from '../pages/HomePage';
@@ -32,11 +33,12 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <section id="page-body">
           <NavBar />
           <Routes>
-            <Route path="/" element={<HomePage/>} exact/>
+            <Route path="/" element={<HomePage articles={articleList}/>} exact/>
             <Route path="/about" element={<AboutPage/>} />
             <Route path="/articles-list" element={<ArticlesListPage/>} />
             <Route path="/article/:name" element={<ArticlePage/>} />

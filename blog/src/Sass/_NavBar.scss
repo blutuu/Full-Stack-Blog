@@ -26,4 +26,15 @@
       }
     }
   }
+
+  #logo {
+    top: 50%;
+    left: 5.6640625%;
+    transform: translateY(-50%);
+
+    @include breakpoint(tablet) {
+      left: auto;
+      right: 5.6640625%;
+    }
+  }
 }

@@ -17,7 +17,7 @@ const UpvoteSection = ({ articleName, upvotes, setArticle }) => {
   return (
     <div id="upvote-section">
       <button onClick={upvoteArticle} className="tl orange pointer">
-        <BiUpvote />{ upvotes } 
+        <BiUpvote />{ upvotes }
       </button>
     </div>
   )
