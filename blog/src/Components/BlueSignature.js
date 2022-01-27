@@ -13,14 +13,16 @@ const BlueSignature = ({ customWidth, customHeight }) => {
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'linear',
       direction: 'normal',
-      duration: 3000
+      duration: 3000,
+      delay: 1000
     });
     anime({
       targets: '#blue2',
       translateY: 0,
       opacity: 1,
       easing: 'easeOutBack',
-      duration: 750
+      duration: 1000,
+      delay: 1000
     });
   }
 
