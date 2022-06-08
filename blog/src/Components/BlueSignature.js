@@ -9,7 +9,7 @@ const BlueSignature = ({ customWidth, customHeight }) => {
 
   const animation = () => {
     anime({
-      targets: '#blue2 path',
+      targets: '#signature path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'linear',
       direction: 'normal',
@@ -17,7 +17,7 @@ const BlueSignature = ({ customWidth, customHeight }) => {
       delay: 1000
     });
     anime({
-      targets: '#blue2',
+      targets: '#signature',
       translateY: 0,
       opacity: 1,
       easing: 'easeOutBack',
@@ -31,7 +31,7 @@ const BlueSignature = ({ customWidth, customHeight }) => {
   }, []);
 
   return (
-    <svg className='o-0' id='blue2' width={width} height={height} 
+    <svg className='o-0' id='signature' width={width} height={height} 
       viewBox='0 0 1278 658' preserveAspectRatio="" 
       style={{transform: 'translateY(-1rem)'}}>
       <path stroke="black" strokeWidth="15" fill="none" d={BlueIIPath}></path>
