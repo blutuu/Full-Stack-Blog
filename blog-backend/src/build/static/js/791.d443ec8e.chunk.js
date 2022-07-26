@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[791],{680:function(e,n,t){t.r(n);t(791);var s=t(556),a=t(184);n.default=function(){return(0,a.jsx)("div",{className:"mv5 ",id:"not-found-page",children:(0,a.jsxs)("div",{id:"page-content",children:[(0,a.jsx)("img",{className:"w5 center db",src:s,alt:"404"}),(0,a.jsx)("h2",{className:"fw3 tc mt3 f2",children:"Sorry, we couldn't find that page"})]})})}},556:function(e,n,t){e.exports=t.p+"static/media/404-error.2eb4792d5302702a29d3.png"}}]);
+//# sourceMappingURL=791.d443ec8e.chunk.js.map

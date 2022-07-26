@@ -9,12 +9,10 @@ import Footer from "../Components/Footer";
 import HomePage from "../pages/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const ArticlePageLoadable = loadable(() => import("../pages/ArticlePage"));
-const ArticlesListPageLoadable = loadable(() =>
-  import("../pages/ArticlesListPage")
-);
-const AboutPageLoadable = loadable(() => import("../pages/About"));
-const NotFoundPageLoadable = loadable(() => import("../pages/NotFoundPage"));
+const ArticlePage = loadable(() => import("../pages/ArticlePage"));
+const ArticlesListPage = loadable(() => import("../pages/ArticlesListPage"));
+const AboutPage = loadable(() => import("../pages/About"));
+const NotFoundPage = loadable(() => import("../pages/NotFoundPage"));
 
 function App() {
   const [articleList, setArticleList] = useState([{ id: 0 }]);
@@ -42,13 +40,10 @@ function App() {
               element={<HomePage articles={articleList} />}
               exact
             />
-            <Route path="/about" element={<AboutPageLoadable />} />
-            <Route
-              path="/articles-list"
-              element={<ArticlesListPageLoadable />}
-            />
-            <Route path="/article/:name" element={<ArticlePageLoadable />} />
-            <Route element={<NotFoundPageLoadable />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/articles-list" element={<ArticlesListPage />} />
+            <Route path="/article/:name" element={<ArticlePage />} />
+            <Route element={<NotFoundPage />} />
           </Routes>
         </section>
 

@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const FormContact = styled.form`
   > * {
     color: white;
-    display: block; 
+    display: block;
   }
   > textarea {
     width: 330px;
-    margin: .5rem 0 1rem;
-    border-radius: .45rem;
+    margin: 0.5rem 0 1rem;
+    border-radius: 0.45rem;
     color: black;
     resize: none;
   }
@@ -17,7 +17,7 @@ const FormContact = styled.form`
     width: 117px;
     height: 29px;
     border: none;
-    border-radius: .45rem;
+    border-radius: 0.45rem;
     color: black;
   }
 `;
@@ -35,13 +35,24 @@ const ContactForm = () => {
       <MidHeader>Contact</MidHeader>
       <FormContact>
         <label htmlFor="Email">Email</label>
-        <textarea type="text" name="Email" id="contact_email" cols="30" rows="1"></textarea>
+        <textarea
+          type="text"
+          name="Email"
+          id="contact_email"
+          cols="30"
+          rows="1"
+        ></textarea>
         <label htmlFor="Email Content">Message</label>
-        <textarea type="text" name="Email Content" id="contact_message" rows="5"></textarea>  
-        <input type="Submit" value="Send"/>
+        <textarea
+          type="text"
+          name="Email Content"
+          id="contact_message"
+          rows="5"
+        ></textarea>
+        <input type="Submit" value="Send" readOnly />
       </FormContact>
     </div>
-  )
-}
+  );
+};
 
 export default ContactForm;

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f9ffa8c.css",
+    "main.js": "/static/js/main.b1d50f4c.js",
+    "static/js/982.e7d6505f.chunk.js": "/static/js/982.e7d6505f.chunk.js",
+    "static/js/5.af0e99d4.chunk.js": "/static/js/5.af0e99d4.chunk.js",
+    "static/js/964.31bb5252.chunk.js": "/static/js/964.31bb5252.chunk.js",
+    "static/js/791.d443ec8e.chunk.js": "/static/js/791.d443ec8e.chunk.js",
+    "static/js/787.f587e8d5.chunk.js": "/static/js/787.f587e8d5.chunk.js",
+    "static/js/692.2b1625d7.chunk.js": "/static/js/692.2b1625d7.chunk.js",
+    "static/media/code.png": "/static/media/code.037ad1f7e7641d2429e3.png",
+    "static/media/macbook2.png": "/static/media/macbook2.b8d73e96320c415c1830.png",
+    "static/media/macbook.png": "/static/media/macbook.2208c7cca6c70e9922f4.png",
+    "static/media/bermuda-triangle.png": "/static/media/bermuda-triangle.4e5ae5d49630a44271e5.png",
+    "static/media/404-error.png": "/static/media/404-error.2eb4792d5302702a29d3.png",
+    "index.html": "/index.html",
+    "static/media/Icon open-clock.svg": "/static/media/Icon open-clock.7027e809f444c3fbc1d6.svg",
+    "main.9f9ffa8c.css.map": "/static/css/main.9f9ffa8c.css.map",
+    "main.b1d50f4c.js.map": "/static/js/main.b1d50f4c.js.map",
+    "982.e7d6505f.chunk.js.map": "/static/js/982.e7d6505f.chunk.js.map",
+    "5.af0e99d4.chunk.js.map": "/static/js/5.af0e99d4.chunk.js.map",
+    "964.31bb5252.chunk.js.map": "/static/js/964.31bb5252.chunk.js.map",
+    "791.d443ec8e.chunk.js.map": "/static/js/791.d443ec8e.chunk.js.map",
+    "787.f587e8d5.chunk.js.map": "/static/js/787.f587e8d5.chunk.js.map",
+    "692.2b1625d7.chunk.js.map": "/static/js/692.2b1625d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f9ffa8c.css",
+    "static/js/main.b1d50f4c.js"
+  ]
+}
